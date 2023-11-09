@@ -302,4 +302,12 @@ contract Market is ERC1155, Ownable2Step {
         shareCreationRestricted = _isRestricted;
         emit ShareCreationRestricted(_isRestricted);
     }
+
+    /// @notice Adds or removes an address from the whitelist of share creators
+    /// @param _address Address to add or remove
+    /// @param _isWhitelisted True if whitelisted, false if not
+    function changeShareCreatorWhitelist(address _address, bool _isWhitelisted) external onlyOwner {
+        require(whitelistedShareCreators[_address] != _isWhitelisted, "State already set");
+        whitelistedShareCreators[_address] = _isWhitelisted;
+    }
 }
