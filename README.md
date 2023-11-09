@@ -12,7 +12,9 @@
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-11-canto/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts November 13, 2023 20:00 UTC
-- Ends November 17, 2023  20:00 UTC 
+- Ends November 17, 2023  20:00 UTC
+
+❗️Awarding Note for Wardens, Judges, and Lookouts: If you want to claim your awards in $ worth of CANTO, you must follow the steps outlined in [this thread](https://discord.com/channels/810916927919620096/1157328189731917855); otherwise you'll be paid out in USDC.
 
 ## Automated Findings / Publicly Known Issues
 
