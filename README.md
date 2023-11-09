@@ -56,7 +56,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-11-canto/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts November 13, 2023 20:00 UTC
-- Ends November 16, 2023  20:00 UTC 
+- Ends November 17, 2023  20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
