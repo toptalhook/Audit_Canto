@@ -25,7 +25,7 @@ Automated findings output for the audit can be found [here](https://github.com/c
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
 Explicit design decisions:
-- A creator cannot buy tokens for shares that they created. Of course, this check can be circumvented easily (buying from a different address or buying an ERC1155 token on the secondary market and unwrapping it). The main motivation behind this check is to make clear that the intention of the system is not that creators buy a lot of their own tokens (which is the case for other SocialFi protocols), it is not a strict security check.
+- A creator cannot buy tokens for shares that they created. Of course, this check can be circumvented easily (buying from a different address or buying an ERC1155 token on the secondary market and unwrapping it). The main motivation behind this check is to make clear that the intention of the system is not that creators buy a lot of their own tokens (which is the case for other bonding curve protocols), it is not a strict security check.
 - NFT minting / burning fees are based on the current supply. This leads to the situation that buying 100 tokens and then minting 100 NFTs is more expensive than buying 1, minting 1, buying 1, minting 1, etc... (100 times). We do not consider this a problem because a user typically has no incentives to mint more than one NFT.
 
 
@@ -33,7 +33,7 @@ Explicit design decisions:
 
 Application Specific Dollar (asD) is a protocol that allows anyone to create stablecoins (pegged to 1 NOTE), with all yield going to the creator.
 
-1155tech is a SocialFi protocol that will use asD as its currency. In contrast to existing SocialFi protocols, users can pay a fee to mint ERC1155 tokens based on their shares. While they do not earn any trading fees for those ERC1155 tokens, they can be traded on the secondary market and used wherever ERC1155 tokens are supported (for instance as a profile picture).
+1155tech is an art protocol that will use asD as its currency. In contrast to existing bonding curve protocols, users can pay a fee to mint ERC1155 tokens based on their shares. While they do not earn any trading fees for those ERC1155 tokens, they can be traded on the secondary market and used wherever ERC1155 tokens are supported (for instance as a profile picture).
 
 # Application Specific Dollar
 asD is always backed 1:1 to NOTE. The NOTE is added to the Canto Lending Market and the creator of a coin can withdraw the carry (i.e., the accrued interest) at any time.
@@ -59,7 +59,7 @@ The owner of the asD contract (i.e. the creator) calls `withdrawCarry` to withdr
 - Compound cTOKEN Documentation: https://docs.compound.finance/v2/ctokens 
 
 # 1155tech
-1155tech allows to create arbitrary SocialFi shares with an arbitrary bonding curve. At the moment, only a linear bonding curve (i.e. a linear price increase based on the total supply of a share) is supported, but additional ones may be added in the future. Every sale incurs a fee, which is split between the creator of the share, the platform, and the current holders of the shares. Holders of a share can mint an ERC1155 token for a fee that is a percentage of the current price. They can also burn this token later on, which also incurs a fee.
+1155tech allows to create arbitrary shares with an arbitrary bonding curve. At the moment, only a linear bonding curve (i.e. a linear price increase based on the total supply of a share) is supported, but additional ones may be added in the future. Every sale incurs a fee, which is split between the creator of the share, the platform, and the current holders of the shares. Holders of a share can mint an ERC1155 token for a fee that is a percentage of the current price. They can also burn this token later on, which also incurs a fee.
 
 ## Creating Shares
 `Market.createNewShare` is used to create a new share. Share creation can be completely permissionless or it can be restricted to whitelisted addresses only. No fee is charged for the creation of new shares.
