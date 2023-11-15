@@ -200,7 +200,7 @@ contract Market is ERC1155, Ownable2Step {
     /// @notice Convert amount of tokens to NFTs for a given share ID
     /// @param _id ID of the share
     /// @param _amount Amount of tokens to convert. User needs to have this many tokens.
-    function mintNFT(uint256 _id, uint256 _amount) external {
+    function mintNFT(uint256 _id, uint256 _amount) external {// @audit double minus token amount for mint
         uint256 fee = getNFTMintingPrice(_id, _amount);
 
         SafeERC20.safeTransferFrom(token, msg.sender, address(this), fee);
