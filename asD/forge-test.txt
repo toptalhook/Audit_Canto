@@ -24,3 +24,5 @@ forge test -vvvv --match-path test/LRTOracleTest.t.sol --match-contract LRTOracl
 
 forge test -vvvv --match-path src/test/TestBabySandBox.t.sol --match-contract TestBabySandBox --match-test "test_attack*"
 
+forge test -vvvv --match-path src/test/TestBank.t.sol --match-contract TestBank --match-test "test_test_attack*"
+

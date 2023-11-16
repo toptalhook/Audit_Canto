@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
 pragma solidity ^0.7.0;
-import {Setup} from "../contracts/Setup.sol";
-import {BabySandboxAttacker} from "../contracts/BabySandboxAttacker.sol";
-import {BabySandbox} from "../contracts/BabySandbox.sol";
+import {Setup} from "../BabyTest1/Setup.sol";
+import {BabySandboxAttacker} from "../BabyTest1/BabySandboxAttacker.sol";
+import {BabySandbox} from "../BabyTest1/BabySandbox.sol";
 import {Reciever} from "../BabyTest2/Reciever.sol";
 import {Dummy} from "../BabyTest2/Dummy.sol";
 import { console2 } from "forge-std/console2.sol";
