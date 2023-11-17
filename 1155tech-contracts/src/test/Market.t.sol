@@ -62,8 +62,8 @@ contract MarketTest is Test {
 
     function testGetBuyPrice() public {
         testCreateNewShare();
-        (uint256 priceOne, uint256 feeOne) = market.getBuyPrice(1, 1);
-        (uint256 priceTwo, uint256 feeTwo) = market.getBuyPrice(1, 2);
+        (uint256 priceOne, uint256 feeOne) = market.getBuyPrice(1, 0);
+        (uint256 priceTwo, uint256 feeTwo) = market.getBuyPrice(1, 0);
         assertEq(priceOne, LINEAR_INCREASE);
         assertEq(priceTwo, priceOne + LINEAR_INCREASE * 2);
         assertEq(feeOne, priceOne / 10);
@@ -73,7 +73,7 @@ contract MarketTest is Test {
     function testBuy() public {
         testCreateNewShare();
         token.approve(address(market), 1e18);
-        market.buy(1, 1);
+        market.buy(1, 0);
         assertEq(token.balanceOf(address(market)), LINEAR_INCREASE + LINEAR_INCREASE / 10);
         assertEq(token.balanceOf(address(this)), 1e18 - LINEAR_INCREASE - LINEAR_INCREASE / 10);
     }

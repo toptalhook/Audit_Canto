@@ -1,0 +1,11 @@
+// Test All
+forge src/test -vv
+
+// Test with call logs
+forge test -vvvv
+
+// LRTDepositPoolInitialize Test
+forge test -vvvv --match-path src/test/Market.t.sol --match-contract MarketTest --match-test "testGetBuyPrice*"
+
+forge test -vvvv --match-path src/test/Market.t.sol --match-contract MarketTest --match-test "testBuy"
+testBuy
